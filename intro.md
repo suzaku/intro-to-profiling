@@ -118,3 +118,8 @@ kernprof -l -v line-profiler/test.py
     ```bash
     python heapy/test.py
     ```
+
+## Books
+
+* [High Performance Python](https://book.douban.com/subject/24641620/)
+* [Mastering Python High Performance](https://book.douban.com/subject/26635148/)
