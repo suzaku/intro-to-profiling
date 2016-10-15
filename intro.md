@@ -2,9 +2,7 @@
 
 ## Measuring Performance
 
-### Benchmarking
-
-* timeit
+### timeit
 
     * Command line interface
 
@@ -46,13 +44,7 @@
     100000 loops, best of 3: 13.5 µs per loop
     ```
 
-### Profiling
-
-#### Definition
-
-> A profile is a set of statistics that describes how often and for how long various parts of the program executed.
-
-#### cProfiler
+### cProfiler
 
 * In Python
 
@@ -77,7 +69,7 @@ p.print_stats()
 python -m cProfile -o restats test.py
 ```
 
-#### pstats
+### pstats
 
 ```python
 import pstats
@@ -85,14 +77,44 @@ p = pstats.Stats('restats')
 p.strip_dirs().sort_stats('cumtime').print_stats(30)
 ```
 
-#### RunSnakeRun
+### RunSnakeRun
 
 ```bash
 runsnake32 restats
 ```
 
-#### line_profiler
+### line_profiler
 
 ```bash
 kernprof -l -v line-profiler/test.py
 ```
+
+### memory_profiler
+
+* Installation
+
+    ```bash
+    # if we install psutil, memory_profiler will run faster
+    pip install psutil
+    pip install memory_profiler
+    ```
+
+* Examples
+
+    ```bash
+    python -m memory_profiler memory-profiler/test.py
+    ```
+
+### guppy
+
+* Installation
+
+    ```bash
+    pip install guppy
+    ```
+
+* Examples
+
+    ```bash
+    python heapy/test.py
+    ```
