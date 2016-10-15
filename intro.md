@@ -66,7 +66,7 @@ p.print_stats()
 * Command line interface
 
 ```bash
-python -m cProfile -o restats test.py
+python -m cProfile -o restats built-in-profiler/test.py
 ```
 
 ### pstats
