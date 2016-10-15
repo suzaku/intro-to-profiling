@@ -90,3 +90,9 @@ p.strip_dirs().sort_stats('cumtime').print_stats(30)
 ```bash
 runsnake32 restats
 ```
+
+#### line_profiler
+
+```bash
+kernprof -l -v line-profiler/test.py
+```
