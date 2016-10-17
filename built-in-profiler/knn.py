@@ -1,9 +1,11 @@
 import numpy as np
 from sklearn.neighbors import NearestNeighbors
 
+features = np.load("merged_features.npy_01.npy")
+# Make the features array longer
+features = np.vstack([features] * 10)
 
 def main():
-    features = np.load("merged_features.npy_01.npy")
     nn = NearestNeighbors(
         n_neighbors=20,
         algorithm='brute',
